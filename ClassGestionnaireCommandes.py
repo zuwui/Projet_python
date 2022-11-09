@@ -17,5 +17,7 @@ class GestionnaireCommandes:
         elif(commandName == "math"):
             from commandes.math import math
             return math(commandParametres)
-        
+        elif(commandName == "anime"):
+            from commandes.anime import anime
+            return anime(commandParametres)
         return

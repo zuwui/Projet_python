@@ -32,8 +32,14 @@ async def on_message(message):
         # We get the result of the command
         responseCommand = gestionnaireCommandes.execCommand(commandName, commandParametres)
         
+        #get channel of the message sender
+        channel = message.channel
+
         if(responseCommand is not None):
-            print(responseCommand)
+            if "embed" in str(responseCommand):
+                await channel.send(embed=responseCommand)
+                return
+            await channel.send(responseCommand)
         else:
             print("Command invalid")
         
@@ -48,3 +54,4 @@ token = dataJsonObject["token"]
 
 # We start the discord bot with our token
 client.run(token)
+
