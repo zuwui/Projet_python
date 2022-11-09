@@ -18,6 +18,8 @@ async def on_message(message):
     if message.content.startswith('$'):      
         from ClassGestionnaireCommandes import GestionnaireCommandes
         
+        # print(message.author.roles)
+        
         # We get the commandManager
         gestionnaireCommandes = GestionnaireCommandes()
         
@@ -25,10 +27,9 @@ async def on_message(message):
         commandName = message.content[1:].split(" ")[0]
         
         # We get all the parametres
-        commandParametres = message.content[1:].split(" ")
-        del commandParametres[0]
+        commandParametres = message.content[1:].split(" ")[1:]
         
-        
+        # We get the result of the command
         responseCommand = gestionnaireCommandes.execCommand(commandName, commandParametres)
         
         if(responseCommand is not None):

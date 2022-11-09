@@ -14,5 +14,8 @@ class GestionnaireCommandes:
         elif(commandName == "jaj"):
             from commandes.jaj import jaj
             return jaj(commandParametres)
+        elif(commandName == "math"):
+            from commandes.math import math
+            return math(commandParametres)
         
         return
