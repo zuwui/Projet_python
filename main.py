@@ -1,5 +1,4 @@
 import discord
-import shutil
 import json
 
 intents = discord.Intents.default()
