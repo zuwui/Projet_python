@@ -1,5 +1,6 @@
 import discord
 import shutil
+import json
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -36,6 +37,14 @@ async def on_message(message):
         else:
             print("Command invalid")
         
-            
+# We open the JSON file
+dataFile = open('./data.json')
 
-client.run("MTAzOTE2MTc3MTQzMDI0ODU0MA.G9prAT.HxeRQm4EJeQA9YFdf7r3gSUIArxoJZp4HGN5Q0")
+# We return the file as a JSON object
+dataJsonObject = json.load(dataFile)
+
+# We get the command path
+token = dataJsonObject["token"]      
+
+# We start the discord bot with our token
+client.run(token)
