@@ -1,5 +1,4 @@
 import requests
-import json
 import discord
 import random
 import string
@@ -152,4 +151,4 @@ def getRandomSeasonalAnime(year, season, limit, headers):
     seasonalAnime = apiRequest(f'https://api.myanimelist.net/v2/anime/season/{year}/{season}?limit={limit}', headers=headers)
     if(seasonalAnime.status_code != 200 or not seasonalAnime.json()["data"]):
         return f"Error while fetching data"
-    return seasonalAnime.json()["data"]
+    return seasonalAnime.json()["data"] 
