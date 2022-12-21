@@ -30,7 +30,7 @@ async def on_message(message):
         commandParametres = message.content[1:].split(" ")[1:]
         
         # We get the result of the command
-        responseCommand = gestionnaireCommandes.execCommand(commandName, commandParametres)
+        responseCommand = await gestionnaireCommandes.execCommand(commandName, commandParametres, message, client)
         
         #get channel of the message sender
         channel = message.channel
