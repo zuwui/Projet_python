@@ -56,6 +56,12 @@
             "baseCommand":"$stop",
             "image":"https://zupimages.net/up/22/51/rh0e.jpg",
             "subCommands":{}
+        },
+        "math":{
+            "description":"Le bot va effectuer le calcul demandé en paramètre avec les nombres le suivant en paramètre.",
+            "baseCommand":"$math {OPERATOR} {FIRST_NUMBER} (N_NUMBER)",
+            "image":"https://lejournal.cnrs.fr/sites/default/files/styles/visuel_principal/public/assets/images/adobestock_206675232_vp.jpg",
+            "subCommands":{}
         }
     },
     "info": "Ce qui entre crochet [], c'est optionnel. Ce qui est entre accolade {}, c'est obligatoire. Entre parenthèses, c'est les options."

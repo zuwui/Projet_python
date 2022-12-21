@@ -4,7 +4,7 @@ class GestionnaireCommandes:
       
      
     async def execCommand(self, commandName, commandParametres, message, client):
-                
+
         if(commandName == "ping"):
             from commandes.ping import ping
             return ping(commandParametres)
@@ -16,7 +16,7 @@ class GestionnaireCommandes:
             return jaj(commandParametres)
         elif(commandName == "math"):
             from commandes.math import math
-            return math(commandParametres, message)
+            return math(commandParametres)
         elif(commandName == "anime"):
             from commandes.anime import anime
             return anime(commandParametres)

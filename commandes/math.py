@@ -1,7 +1,6 @@
 import json
 
-def math(commandParametres, message):
-    print(message)
+def math(commandParametres):
     commandParametres = removeVoidParametres(commandParametres)
 
     operatorList = ["add", "sub", "mult", "div", "help"]
