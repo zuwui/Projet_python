@@ -1,0 +1,26 @@
+{
+    "commands":{
+        "anime":{
+            "description":"Commande qui permet d'afficher certaines informations d'un anime en se basant sur l'api de MyanimeList.",
+            "baseCommand":"$anime [nom anime (min 3 caractères)]",
+            "image":"https://i.ibb.co/Zh21r54/blob-fktr.jpg",
+            "subCommands": {
+                "seasonal":{
+                    "command":"$anime seasonal {year} {season (winter, summer, fall, spring)} [limit (1-500)]",
+                    "description":"Commande qui permet de récupérer les animés de saison en fonction de l'année et de la saison."
+                },
+                "ranking":{
+                    "command":"$anime randomRank {type (all, airing, upcoming, tv, ova, movie, special,bypopularity,favorite)} [limit (1-500)]",
+                    "description":"Commande qui permet de récupérer un des animés du top de manière random et ce, dans plusieurs top différent."
+                }
+            }
+        },
+        "help":{
+            "description":"Command qui explique comment utiliser les autres commandes :eyes:.",
+            "baseCommand":"$help [command name]",
+            "image":"https://i.ibb.co/vdtPVZv/a-670x254-width-800.jpg",
+            "subCommands":{}
+        }
+    },
+    "info": "Ce qui entre crochet [], c'est optionnel. Ce qui est entre accolade {}, c'est obligatoire. Entre parenthèses, c'est les options."
+}

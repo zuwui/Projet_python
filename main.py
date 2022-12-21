@@ -30,10 +30,16 @@ async def on_message(message):
         commandParametres = message.content[1:].split(" ")[1:]
         
         # We get the result of the command
-        responseCommand = gestionnaireCommandes.execCommand(commandName, commandParametres, message)
+        responseCommand = await gestionnaireCommandes.execCommand(commandName, commandParametres, message, client)
         
+        #get channel of the message sender
+        channel = message.channel
+
         if(responseCommand is not None):
-            await message.channel.send(responseCommand)
+            if "embed" in str(responseCommand):
+                await channel.send(embed=responseCommand)
+                return
+            await channel.send(responseCommand)
         else:
             await message.channel.send(responseCommand)
         
