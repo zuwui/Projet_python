@@ -41,7 +41,7 @@ async def on_message(message):
                 return
             await channel.send(responseCommand)
         else:
-            print("Command invalid")
+            await message.channel.send(responseCommand)
         
 # We open the JSON file
 dataFile = open('./data.json')
@@ -54,4 +54,3 @@ token = dataJsonObject["token"]
 
 # We start the discord bot with our token
 client.run(token)
-
