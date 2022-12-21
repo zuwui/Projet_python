@@ -20,6 +20,42 @@
             "baseCommand":"$help [command name]",
             "image":"https://i.ibb.co/vdtPVZv/a-670x254-width-800.jpg",
             "subCommands":{}
+        },
+        "join":{
+            "description":"Le bot va rejoindre le serveur vocal sur lequel vous êtes.",
+            "baseCommand":"$join",
+            "image":"https://zupimages.net/up/22/51/rh0e.jpg",
+            "subCommands":{}
+        },
+        "leave":{
+            "description":"Le bot quitte le serveur vocal sur lequel il est connecté.",
+            "baseCommand":"$leave",
+            "image":"https://zupimages.net/up/22/51/rh0e.jpg",
+            "subCommands":{}
+        },
+        "play":{
+            "description":"Le bot va jouer une musique disponnible en local.",
+            "baseCommand":"$play {nom de la musique}",
+            "image":"https://zupimages.net/up/22/51/rh0e.jpg",
+            "subCommands":{}
+        },
+        "pause":{
+            "description":"Le bot va mettre en pause la musique joué.",
+            "baseCommand":"$pause",
+            "image":"https://zupimages.net/up/22/51/rh0e.jpg",
+            "subCommands":{}
+        },
+        "resume":{
+            "description":"Le bot va relancer la musique mise en pause.",
+            "baseCommand":"$resume",
+            "image":"https://zupimages.net/up/22/51/rh0e.jpg",
+            "subCommands":{}
+        },
+        "stop":{
+            "description":"Le bot va stopper entièrement la musique.",
+            "baseCommand":"$stop",
+            "image":"https://zupimages.net/up/22/51/rh0e.jpg",
+            "subCommands":{}
         }
     },
     "info": "Ce qui entre crochet [], c'est optionnel. Ce qui est entre accolade {}, c'est obligatoire. Entre parenthèses, c'est les options."
