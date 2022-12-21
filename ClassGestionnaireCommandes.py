@@ -3,7 +3,7 @@
 class GestionnaireCommandes:
       
      
-    def execCommand(self, commandName, commandParametres):
+    def execCommand(self, commandName, commandParametres, message):
                 
         if(commandName == "ping"):
             from commandes.ping import ping
@@ -16,6 +16,6 @@ class GestionnaireCommandes:
             return jaj(commandParametres)
         elif(commandName == "math"):
             from commandes.math import math
-            return math(commandParametres)
+            return math(commandParametres, message)
         
         return

@@ -30,12 +30,12 @@ async def on_message(message):
         commandParametres = message.content[1:].split(" ")[1:]
         
         # We get the result of the command
-        responseCommand = gestionnaireCommandes.execCommand(commandName, commandParametres)
+        responseCommand = gestionnaireCommandes.execCommand(commandName, commandParametres, message)
         
         if(responseCommand is not None):
-            print(responseCommand)
+            await message.channel.send(responseCommand)
         else:
-            print("Command invalid")
+            await message.channel.send(responseCommand)
         
 # We open the JSON file
 dataFile = open('./data.json')
